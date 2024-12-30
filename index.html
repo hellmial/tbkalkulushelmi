@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Materi Kalkulus - Limit, Turunan, dan Integral">
+    <title>Materi Kalkulus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+     <nav>
+        <div class="wrapper">
+        <div class="logo"><a href=" ">Kalkulus</a></div>
+        <div class="menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#limit">Limit</a></li>
+                <li><a href="#derivative">Turunan</a></li>
+                <li><a href="#integral">Integral</a></li>
+                <li><a href="" class="tbl-biru">About</a></li>
+
+            </ul>
+        </div>
+        </nav>
+
+    <!-- Halaman Utama -->
+    <div class="wrapper">
+    <section id="home">
+        <img src="https://spada.unidayan.ac.id/pluginfile.php/54856/course/overviewfiles/Kalkulus%20Peubah%20Banyak.jpg" height="500" width="500">
+        <div class="kolom">
+            <p class="deskripsi">Belajar Kalkulus</p>
+            <h2>Kalkulus adalah cabang matematika yang berfokus pada perubahan, dan terdiri dari dua konsep utama: limit, turunan, dan integral. 
+                Kalkulus sangat penting dalam banyak bidang, termasuk fisika, ekonomi, dan rekayasa</h2>
+            </div>
+    </section>
+    </div>
+    <!-- Materi Limit -->
+    <section id="limit">
+        <div class="kolom">
+            <p class="deskripsi">Limit</p>
+        <h2>Limit</h2>
+        <p>Limit adalah konsep dasar dalam kalkulus yang mengarah pada pendekatan nilai fungsi pada titik tertentu. Limit sering digunakan untuk mendefinisikan turunan dan integral.</p>
+        <h3>Definisi Limit</h3>
+        <p>Limit dari suatu fungsi f(x) saat x mendekati a adalah nilai yang didekati oleh f(x) ketika x semakin mendekati a.</p>
+        <h3>Contoh Soal Limit</h3>
+        <p>Misalkan <b>f(x) = 2x + 3</b>, tentukan limitnya saat x mendekati 2:</p>
+        <pre>
+            Lim (x → 2) (2x + 3) = 2(2) + 3 = 7
+        </pre>
+        </div>
+        <!-- Kalkulator Limit -->
+        <h3>Kalkulator Limit</h3>
+        <label for="limit-function">Masukkan Fungsi f(x): </label>
+        <input type="text" id="limit-function" placeholder="Contoh: 2*x + 3">
+        <br>
+        <label for="limit-value">Masukkan Nilai x: </label>
+        <input type="number" id="limit-value" placeholder="Contoh: 2">
+        <button onclick="calculateLimit()">Hitung Limit</button>
+        <p id="limit-result"></p>
+    </section>
+
+    <!-- Materi Turunan -->
+    <section id="derivative">
+        <div class="tengah">
+            <div class="kolom">
+                <p class="deskripsi"></p>
+                <h2>Turunan</h2>
+                <p>Turunan mengukur perubahan suatu fungsi pada titik tertentu. Turunan dapat dianggap sebagai laju perubahan atau kemiringan grafik fungsi di titik tertentu.</p>
+                <h3>Definisi Turunan</h3>
+                <p>Turunan dari fungsi f(x) di titik a dapat didefinisikan sebagai limit rasio perubahan fungsi terhadap perubahan x saat x mendekati a.</p>
+                <h3>Contoh Soal Turunan</h3>
+                <p>Misalkan <b>f(x) = x² + 3x</b>, tentukan turunannya:</p>
+            <pre>
+            f'(x) = d/dx (x² + 3x)
+                  = 2x + 3
+        </pre>  
+            </div>
+        </div>
+        
+
+        <!-- Kalkulator Turunan -->
+        <h3>Kalkulator Turunan</h3>
+        <label for="derivative-function">Masukkan Fungsi f(x): </label>
+        <input type="text" id="derivative-function" placeholder="Contoh: x^2 + 3*x">
+        <br>
+        <button onclick="calculateDerivative()">Hitung Turunan</button>
+        <p id="derivative-result"></p>
+    </section>
+
+    <!-- Materi Integral -->
+    <section id="integral">
+        <div class="tengah">
+            <div class="kolom">
+                <p class="deskripsi">Integral</p>
+                <p>Integral adalah kebalikan dari turunan. Integral digunakan untuk menghitung luas area di bawah kurva atau total perubahan suatu fungsi pada interval tertentu.</p>
+                <h3>Definisi Integral</h3>
+                <p>Integral dari fungsi f(x) pada interval [a, b] adalah limit jumlah-jumlah tak terhingga dari luas persegi panjang kecil yang dibentuk oleh fungsi tersebut.</p>
+                <h3>Contoh Soal Integral</h3>
+                <p>Misalkan <b>f(x) = x²</b>, tentukan integralnya dari 0 hingga 2:</p>
+                <pre>
+                    ∫(x²) dx = (1/3)x³ + C
+                    Evaluasi dari 0 hingga 2:
+                    (1/3)(2³) - (1/3)(0³) = (1/3)(8) = 8/3
+                </pre>
+            </div>
+        </div>
+        
+
+        <!-- Kalkulator Integral -->
+        <h3>Kalkulator Integral</h3>
+        <label for="integral-function">Masukkan Fungsi f(x): </label>
+        <input type="text" id="integral-function" placeholder="Contoh: x^2">
+        <br>
+        <label for="integral-lower">Batas Bawah (a): </label>
+        <input type="number" id="integral-lower" placeholder="Contoh: 0">
+        <br>
+        <label for="integral-upper">Batas Atas (b): </label>
+        <input type="number" id="integral-upper" placeholder="Contoh: 2">
+        <br>
+        <button onclick="calculateIntegral()">Hitung Integral</button>
+        <p id="integral-result"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Dibuat untuk memenuhi tugas besar Mata Kuliah Kalkulus</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
